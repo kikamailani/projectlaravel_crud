@@ -2,16 +2,6 @@
 @section('content')
     <form action="{{ route('akun.tambah.formulir') }}" method="POST" class="card p-5">
 
-        {{--
-            1.tag <form> attr action & method
-                method:
-                - GET : form tujuan mencari data (search)
-                - GET : form tujuan menambahkan/menghapus/mengubah
-                action : route memproses data
-                - arahkan route yang akan menangani proses data yang ke db nya
-                - jika GET : arahkan ke route yang sama dengan route yang menampilkan blade ini
-        --}}
-
         @csrf
         @if (Session::get('success'))
             <div class="alert alert-success">{{ Session::get('success') }}</div>
